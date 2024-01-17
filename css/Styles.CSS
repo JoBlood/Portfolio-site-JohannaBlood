@@ -88,6 +88,7 @@ a:focus {
 }
 
 .button {
+
   display: inline-block;
 border: 2px solid #F3BFFA;
 background-color: #B8E0D2;
@@ -98,10 +99,13 @@ background-color: #B8E0D2;
   border-radius: 3px;
 
   text-decoration: none;
-  transition: 0.2s opacity;
+  transition-duration: 0.5s opacity, 0.5s font-size;
+
+  
 }
 
 .button:hover {
+  cursor: pointer;
   color: #ff7f50;
   color: #fff;
   opacity: 0.8;
@@ -116,12 +120,18 @@ background-color: #B8E0D2;
 .button.contact {
   color: #4F1D62;
   text-transform: uppercase;
+  
+
 
 }
 
 .button.contact:hover {
+  cursor: pointer;
   background-color: #ff7f50;
   color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .button.contact:active {
@@ -181,7 +191,7 @@ header h1 {
     display: block;
   }
 
-  #work .row h3 {text-align: center;}
+
 
 
   .logo 
@@ -349,9 +359,89 @@ body {font-size: 18px;}
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+
+  .col-lg-5 {
+      flex: 5;
+      width:40% ;
+  }
+
+  .col-lg-7 {
+      flex: 7;
+      width: 60%;
+  }
 }
+
+
+
+
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0px ,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation-duration: 20s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 24s cloud-move-reverse infinite alternate linear;
+}
+
+
+
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+.nav-links{
+  animation: fadeIn 1s ease-in-out; /* Change the duration and timing function as needed */
+}
+
+/* Additional styles for your navigation links */
+div.container-header a {
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
 }
