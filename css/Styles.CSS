@@ -155,6 +155,9 @@ main {
   max-width: 1200px;
 }
 .row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
 
@@ -178,6 +181,9 @@ header h1 {
 
 
 #work .row { 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 25px;
    border-bottom: 1px solid #4a4a4a; 
  
@@ -256,7 +262,7 @@ border: solid #F3BFFA 1px;
 }
 .row
  {display: flex;
-flex-direction: row;
+flex-direction: column;
 margin: 25px;}
 .column 
 {
@@ -288,7 +294,10 @@ main {
 
 }
 .row {
+
+  width: 100%;
   display: flex;
+  flex-direction: column;
   
 }
 
@@ -344,13 +353,19 @@ body {font-size: 18px;}
 }
 
 [class*="col-"] {
-  float: left;
+  flex-direction: column;
   padding: 10px;
+
 }
+
+
 .row::after {
+  flex-direction: row;
   content: "";
   clear: both;
   display: table;
+
+
 }
 
 }
@@ -436,7 +451,7 @@ X-large devices (1440px or larger)
 
 
 .nav-links{
-  animation: fadeIn 1s ease-in-out; /* Change the duration and timing function as needed */
+  animation: fadeIn 1s ease-in-; /* Change the duration and timing function as needed */
 }
 
 /* Additional styles for your navigation links */
