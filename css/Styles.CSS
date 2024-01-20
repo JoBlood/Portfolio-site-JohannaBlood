@@ -1,16 +1,5 @@
 /* Colors used:
-Russian Violet #4F1D62;
-Russian Violet #2 #342063;
-Mauve #F3BFFA;
-Anti-flash White #F6F7F9;
-Aquamarine #87E7C4;
-Emerald #18D68E
-off black #1d1e1f
-#0c6a46
-#6c3083
-#994c30
-#1430cf
-#994c30 */
+*/
 
 
 * {box-sizing: border-box;}
@@ -20,7 +9,6 @@ html {
 }
 
 body {
-
 
   background-color: #B8E0D2;
   font-family: 'Lato', sans-serif;
@@ -153,7 +141,7 @@ background-color: #B8E0D2;
 
 main { 
   padding-top: 56;
-  padding: 0 15px;
+  padding: 15px;
   display: block;
   margin: auto;
   max-width: 1200px;
@@ -168,27 +156,96 @@ main {
 
 /* components layout*/
 
+
+/*HEADER*/
 header {
   text-align: center;
   background-color: #FFD3E0;
   padding:10px 0 4px;
-  display: inline-block;
+ z-index: 2;
   width: 100%;
+  top: 0;
+  left: 0;
   position: fixed;
-  border: solid #F3BFFA 1px; 
+  border-bottom: solid #F3BFFA 1px; 
   box-shadow: 0 9px 22px rgba(87, 72, 87, 0.5)  ; 
  
 }
-header h1 {
-  margin: 0;
+
+
+  .logo 
+  {max-width: 150px;}
+
+
+
+
+nav > ul {
+  margin: 1em 0;
+  list-style-type:none;
+  padding: 0;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+
+.navtoggle li.icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+
+.navtoggle.responsive li {
+
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 127, 80, 0.5);
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+
+ border-bottom:none;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
+
+}
+
+nav > ul > li > a:visited:hover:active:focus {
+  
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4F1D62;
+
+} 
+
+
+
+#header {
+  background-color: #c2b8b8;
 }
 
 
 
-#work .row { 
+#work .float-row { 
   width: 100%;
-  display: flex;
-  flex-direction: column;
   padding-bottom: 25px;
    border-bottom: 1px solid #4a4a4a; 
  
@@ -205,36 +262,6 @@ header h1 {
 
 
 
-  .logo 
-  {max-width: 150px;
- padding: 10px;}
-
- nav > ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-
-}
-nav > ul > li > a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
-
-}
-nav > ul > li > a:visited:hover:active:focus {
-  
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4F1D62;
-
-} 
-#header {
-  background-color: #c2b8b8;
-}
-
-
 #body
 {background-color: #B8E0D2 ;}
 #hero {
@@ -247,7 +274,6 @@ nav > ul > li > a:visited:hover:active:focus {
 
 #main {
   background-color: #FFF8C4;
-
   padding-top: 300px;
 
 }
@@ -256,17 +282,15 @@ nav > ul > li > a:visited:hover:active:focus {
 /*footer*/
 
 footer {
-  background-color: #FFC8A2
-;
+  background-color: #FFC8A2;
 color: #3D2729;
 
 padding: 40px 0 40px 0;
 border: solid #F3BFFA 1px; 
 
 }
-.row
- {display: flex;
-flex-direction: column;
+footer .row
+ {
 margin: 25px;}
 .column 
 {
@@ -297,14 +321,7 @@ main {
   padding-top: 300px;
 
 }
-.row {
-
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  
-}
-
+ 
 .col-md-6 {
   flex: 50%;
 }
@@ -333,75 +350,40 @@ main {
 
 }
 
-/* ==============================
-Small devices max 640px
-================================= */
-@media only screen and (max-width: 640px) {
 
-  .navtoggle {
-    position: relative;
-  }
-  .navtoggle {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navtoggle li .icon {
-    position: relative;
-    right: 0;
-    top: 2px;
-    font-size: 20px;
-  }
-  .navtoggle li:not(:last-child) {
-    display: none;
-  }
-
-
-
-  .navtoggle li:not(:last-child) {
-    display: inline-block;
-  }
-   nav > ul > li {
-    display: inline-block;
-   }
-  
-   nav > ul {
-    margin: 1em 0;
-  }
-
-  nav {
-    width: auto;
-    float: right;
-    margin-top: 4px;
-  }
-
-
-
-  .navtoggle.responsive nav {
-    padding: 24px 0 0;
-  }
-
-
-  .navtoggle.responsive li {
-    display: block;
-    padding: 10px 0;
-    border-top: 1px solid rgba(255, 127, 80, 0.5);
-  }
-
-  .navtoggle.responsive li:last-child {
-    padding: 0 0 10px;
-  }
-}
 
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
   header {
+    text-align: unset;
     padding: 10px 0 4px;
     margin: 0 ;
   }
-  
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 0px;
+  }
+  .navtoggle.responsive nav {
+    padding: 0px 0 0;
+  }
+  nav > ul {
+    list-style-type: none;
+    padding: 0;
+   margin: 1em 0;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+   }
+
+   .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
   .logo  {
     max-width: 250px;
    padding: 10px;
@@ -410,12 +392,6 @@ Medium devices (640px and larger)
     display: none;
   }
    
-  .navtoggle li:not(:last-child) {
-    display: inline-block;
-  }
-   nav > ul > li {
-    display: inline-block;
-   }
 
   main { padding-top: 300px;
 
@@ -428,6 +404,14 @@ body {font-size: 18px;}
   padding: 10px;
 }
 
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+
 [class*="col-"] {
 float: left;
 box-sizing: border-box;
@@ -436,7 +420,7 @@ box-sizing: border-box;
 }
 
 
-.container.row::after {
+ .float-row::after {
   content: "";
   clear: both;
   display: table;
@@ -444,34 +428,28 @@ box-sizing: border-box;
 
 }
 
+/*About Page*/
+ 
+.skills-tools {
+  background-color: #F3BFFA;
+  max-width: 50%;
+}
+ 
+ .smaller-row {
+padding: 0 15px;
 
+ }
+
+}
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 
-  .logo 
+.logo 
   {max-width: 250px;
  padding: 10px;}
-@media only screen and (min-width: 640px) {
-  
-  .navtoggle .icon {
-    display: none;
-  }
-}
-
-  .col-lg-5 {
-      flex: 5;
-      width:40% ;
-  }
-
-  .col-lg-7 {
-      flex: 7;
-      width: 60%;
-  }
-}
-
 
 
 
@@ -550,4 +528,5 @@ div.container-header a
   position: relative;
   z-index: 0;
   cursor: pointer;
-}}
+}
+}
