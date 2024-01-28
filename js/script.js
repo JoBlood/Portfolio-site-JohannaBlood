@@ -81,3 +81,20 @@ function menuToggle() {
   } else {
     x.className = 'navtoggle';
   }}
+
+  /* Carousel*/
+$(document).ready(function() {
+  // Initialize the carousel for Leo's Scenario
+  $('.leo-carousel').slick({
+    dots: true,
+    slidesToShow: 1, // Display one image at a time
+    slidesToScroll: 1 // Scroll one image at a time
+  });
+
+  // Initialize the carousel for Lia's Scenario
+  $('.lia-carousel').slick({
+    dots: true,
+    slidesToShow: 1, // Display one image at a time
+    slidesToScroll: 1 // Scroll one image at a time
+  });
+});
