@@ -47,7 +47,6 @@ h4 {
 h1 {
   color: #4f1d62;
   font-size: 2em;
-  font-weight: 400px;
   text-align: center;
 }
 
@@ -160,7 +159,7 @@ a:focus {
 /* Coming soon button finish */
 
 .button:hover {
-  cursor: 🌴, pointer;
+  cursor: pointer;
   color: #03a67b;
   background-color: #fdc5c4; /* Light pink */
   opacity: 0.9;
@@ -178,7 +177,7 @@ a:focus {
 }
 
 .button.contact:hover {
-  cursor: 🌴, pointer;
+  cursor: pointer;
   background-color: #fdc5c4;
   color: #03a67b;
   opacity: 0.8;
@@ -412,7 +411,7 @@ nav > ul > li > a:visited:hover:active:focus {
   background-color: #4f1d62;
   border: none;
   border-radius: 50%;
-  cursor: 🌴, pointer;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
@@ -424,6 +423,15 @@ nav > ul > li > a:visited:hover:active:focus {
 .carousel-slide img {
   max-width: 100%; /* Make the images responsive */
   height: auto;
+}
+
+.slick-prev::before,
+.slick-next::before,
+.slick-prev,
+.slick-next {
+  font-family: 'slick';
+  opacity: 0;
+  color: transparent;
 }
 
 /* About Page */
@@ -440,7 +448,6 @@ nav > ul > li > a:visited:hover:active:focus {
   width: 100%;
   height: auto;
   margin-right: 20px;
- 
 }
 
 .float-row {
@@ -522,7 +529,7 @@ Medium devices (640px and larger)
   }
 
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .col-md-6 {
@@ -565,6 +572,10 @@ Large devices (1024px or larger)
   .logo {
     max-width: 250px;
     padding: 10px;
+  }
+
+  body {
+    font-size: 20px;
   }
 
   /* ==============================
@@ -634,6 +645,6 @@ X-large devices (1440px or larger)
     padding: 10px;
     position: relative;
     z-index: 0;
-    cursor: 🌴, pointer;
+    cursor: pointer;
   }
 }
