@@ -98,3 +98,5 @@ $(document).ready(function() {
     slidesToScroll: 1 // Scroll one image at a time
   });
 });
+
+
